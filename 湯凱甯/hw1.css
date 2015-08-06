@@ -1,0 +1,11 @@
+.hidden {
+  font-size: 0;
+}
+
+.color {
+  color: deeppink;
+}
+
+.del {
+    text-decoration: line-through;
+ }
