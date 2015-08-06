@@ -1,0 +1,20 @@
+body{
+	margin: 50px 100px;
+	font-size: 20px;
+	font-family: 
+}
+#options{
+	margin-top: 50px;
+}
+
+.hide{
+	color: white;
+}
+
+.emphasis{
+	color: red;
+}
+
+.done{
+	text-decoration: line-through; 
+}
