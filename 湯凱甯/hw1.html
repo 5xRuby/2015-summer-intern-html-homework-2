@@ -2,63 +2,83 @@
 <html>
     <head>
         <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="./hw1.css">
         <meta charset="utf-8">
         <title>JS Bin</title>
     </head>
     <body>
-        <!-- <h2>Todo for Works</h2> -->
-        <!-- <h2>Todo for School</h2> -->
-        <!-- <h2>Hangout with Friends</h2> -->
-        <form action="">
+        <div class="container">
+        <div class="col-sm-3 col-sm-push-3">
             <div class="works">
                 <h2>Works</h2>
                 <p class="first">
-                    <input type="checkbox" name="works" value="1">
-                    <label>item 1 </label>
+                    <label>
+                        <input type="checkbox" value="1">
+                        <span>item 1</span>
+                    </label>
                 </p>
                 <p class="second">
-                    <input type="checkbox" name="works" value="2">
-                    <label>item 2 </label>
+                    <label>
+                        <input type="checkbox" value="2">
+                        <span>item 2</span>
+                    </label>
                 </p>
                 <p class="third">
-                    <input type="checkbox" name="works" value="3">
-                    <label>item 3 </label>
+                    <label>
+                        <input type="checkbox" value="3">
+                        <span>item 3</span>
+                    </label>
                 </p>
             </div>
             <div class="school">
                 <h2>School</h2>
                 <p class="first">
-                    <input type="checkbox" name="works" value="1">
-                    <label>item 1 </label>
+                    <label>
+                        <input type="checkbox" value="1">
+                        <span>item 1</span>
+                    </label>
                 </p>
                 <p class="second">
-                    <input type="checkbox" name="works" value="2">
-                    <label>item 2 </label>
+                    <label>
+                        <input type="checkbox" value="2">
+                        <span>item 2</span>
+                    </label>
                 </p>
                 <p class="third">
-                    <input type="checkbox" name="works" value="3">
-                    <label>item 3 </label>
+                    <label>
+                        <input type="checkbox" value="3">
+                        <span>item 3</span>
+                    </label>
                 </p>
             </div>
             <div class="hangout">
                 <h2>Hangout</h2>
                 <p class="first">
-                    <input type="checkbox" name="works" value="1">
-                    <label>item 1 </label>
+                    <label>
+                        <input type="checkbox" value="1">
+                        <span>item 1</span>
+                    </label>
                 </p>
                 <p class="second">
-                    <input type="checkbox" name="works" value="2">
-                    <label>item 2 </label>
+                    <label>
+                        <input type="checkbox" value="2">
+                        <span>item 2</span>
+                    </label>
                 </p>
                 <p class="third">
-                    <input type="checkbox" name="works" value="3">
-                    <label>item 3 </label>
+                    <label>
+                        <input type="checkbox" value="3">
+                        <span>item 3</span>
+                    </label>
                 </p>
             </div>
+        </div>
+        <div class="right col-sm-3 col-sm-push-3">
             <p>
             <select id="select" name="select">
-                <option selected="selected">'wwww'</option>
+                <option selected="selected">Select Group</option>
                 <option value="works">Works</option>
                 <option value="school">School</option>
                 <option value="hangout">Hangout</option>
@@ -67,11 +87,24 @@
                 <option value="third">item 3</option>
             </select>
             </p>
-            <input type="radio" name="option" value='hidden'>Hide<br>
-            <input type="radio" name="option" value='color'>Emphises<br>
-            <input type="radio" name="option" value='del'>Done
-        </form>
-        <button>Go!</button>
+            <label>
+                <input type="radio" name="radio" value='hidden'>
+                Hide
+            </label><br>
+            <label>
+                <input type="radio" name="radio" value='color'>
+                Emphises
+            </label><br>
+            <label>
+                <input type="radio" name="radio" value='del'>
+                Done
+            </label>
+            <p>
+            <button id='go' class='btn btn-success btn-lg'>Go!</button>
+            <button id='reset' class='btn btn-info btn-lg'>Reset</button>
+            </p>
+        </div>
+        </div>
 
         <script src="./hw1.js"></script>
     </body>

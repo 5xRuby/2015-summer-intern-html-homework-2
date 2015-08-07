@@ -1,9 +1,13 @@
-$('button').on("click", function() {
-  $('*').removeClass('hidden color del a');
+$('button#go').on("click", function() {
+  $('*').removeClass('hidden color del');
 
-  var optionval = $('input[name="option"]:checked').val();
-  $('input[name="works"]:checked + label').toggleClass(optionval);
-
+  var optionval = $('input[type=radio]:checked').val();
   var selectval = $('#select option:selected').val();
-  if (selectval !== "'wwww'") $(`.${selectval}`).toggleClass(optionval);
+  $(`.${selectval} input[type=checkbox]`).prop("checked", true);
+  $('input[type=checkbox]:checked ~ span').addClass(optionval);
+});
+
+$('button#reset').on("click", function() {
+  $('input[type=checkbox]').prop("checked", false);
+  $('*').removeClass('hidden color del');
 });
