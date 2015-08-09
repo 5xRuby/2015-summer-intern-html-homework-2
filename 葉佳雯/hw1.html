@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+  <link rel="stylesheet" href="./hw1.css">
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+  <h2>My JQuery selector practice</h2>
+    <div class="col-xs-6 frame">
+      <h3>Todo for works</h3>
+      <div class="work">
+        <input type="checkbox" class="high"   value="high"><span>Some tesk: high</span><br />
+        <input type="checkbox" class="normal" value="normal"><span>Some tesk: noemal</span><br />
+        <input type="checkbox" class="low"    value="low"><span>Some tesk: low</span><br />
+      </div>
+      <h3>Todo for school</h3>
+      <div class="school">
+        <input type="checkbox" class="high" value="high"><span>Some tesk: high</span><br />
+        <input type="checkbox" class="normal" value="normal"><span>Some tesk: noemal</span><br />
+        <input type="checkbox" class="low" value="low"><span>Some tesk: low</span><br />
+      </div>
+      <h3>Todo for friend</h3>
+      <div class="friend">
+        <input type="checkbox" class="high" value="high"><span>Some tesk: high</span><br />
+        <input type="checkbox" class="normal" value="normal"><span>Some tesk: noemal</span><br />
+        <input type="checkbox" class="low" value="low"><span>Some tesk: low</span><br />
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <select id="SelectList">
+        <option value="default">Select option</option>
+        <option value="high">High</option>
+        <option value="normal">Normal</option>
+        <option value="low">Low</option>
+        <option value="work">Work</option>
+        <option value="school">School</option>
+        <option value="friend">Friend</option>
+      </select>
+      <div class="radio">
+        <input type="radio" name="radio" value="hide"/><label>Hide</label><br>
+        <input type="radio" name="radio" value="emphasis"/><label>Emphasis</label><br>
+        <input type="radio" name="radio" value="done"/><label>Done</label><br>
+      </div>
+
+      </ul>
+
+
+      <button id="start" class="btn btn-primary">OK</button>
+      <button id="clean" class="btn btn-primary">Clear</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="./hw1.js"></script>
+</body>
+</html>
