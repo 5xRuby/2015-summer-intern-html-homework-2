@@ -1,0 +1,84 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>P1</title>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+  <style>
+    .em {
+      color: red;
+    } 
+    .finished{
+      text-decoration: line-through;
+    }
+    .container{
+      width: 50%;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="works">
+      <h2>Todo for works</h2>
+    </div>  
+    <div class="school">
+      <h2>Todo for school</h2>
+    </div>
+    <div class="friend">
+      <h2>Todo for friend</h2>
+    </div>
+
+    <div class="actions">
+      <h2>Action</h2>
+      <div><input type="radio" id="hide" name="action"> Hide <br></div>
+      <div><input type="radio" id="emphasize" name="action"> Emphasize <br></div>
+      <div><input type="radio" id="done" name="action"> Done <br></div>
+    </div>
+
+    <br> 
+    <select id="options">
+      <option value="all">All</option>
+      <option value="works">Only Works</option>
+      <option value="school">Only School</option>
+      <option value="friend">Only Friend</option>
+    </select>
+    
+    <p><input type="submit" value="OK" id="submit"></p>
+  </div>
+  
+  <script>
+    var todoTasks = [
+      {title: "Fix Bug #1", category: "works", importantLevel: "high"},
+      {title: "Finish Functionnality #1", category: "works", importantLevel: "normal"},
+      {title: "Refactor", category: "works", importantLevel: "low"},
+      
+      {title: "Finish Homework", category: "school", importantLevel: "high"},
+      {title: "Finish Work", category: "school", importantLevel: "normal"},
+      {title: "Write Dairy Note", category: "school", importantLevel: "low"},
+
+      {title: "Go Shopping with Friends", category: "friend", importantLevel: "high"},
+      {title: "Go to Kevin's House", category: "friend", importantLevel: "normal"},
+      {title: "Do Homework with Classmates", category: "friend", importantLevel: "low"},
+    ];  
+  </script>
+  <script src="./p1.js"></script>
+  <script>
+    initializeTodoDomElements();
+
+    $('#submit').on('click', function(){
+      var selector = buildCssSelectorForSelectedTodoTasks();
+      var $selectedTodoTasks = $(selector);
+
+      if($('#emphasize').prop('checked')){
+        emphasize($selectedTodoTasks);
+      }else if($('#done').prop('checked')){
+        markAsDone($selectedTodoTasks);
+      }else if($('#hide').prop('checked')){
+        hide($selectedTodoTasks);      
+      } 
+      clearClickedProp($('#options option'));
+    });
+  </script>
+</body>
+</html>
